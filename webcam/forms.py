@@ -27,7 +27,7 @@ class CameraField(forms.FileField):
     def to_python(self, data):
         filename, raw_val = data
         if raw_val:
-            return SimpleUploadedFile(filename, base64.decodestring(raw_val))
+            return SimpleUploadedFile(filename, base64.b64decode(raw_val))
 
     def clean(self, data, initial=None):
         filename, raw_val = data
