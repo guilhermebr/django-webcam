@@ -72,7 +72,6 @@ setup(
     },
     zip_safe=False,
     install_requires=[
-        'uuid',
         'Django>=1.4.5',
     ],
     tests_require=[
